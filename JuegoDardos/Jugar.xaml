@@ -1,0 +1,30 @@
+﻿<Window x:Class="JuegoDardos.Jugar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Jugar" Height="300" Width="541.237" WindowState="Maximized" WindowStyle="None" Icon="icono.ico" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="99*"/>
+            <RowDefinition Height="26*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/dardos.png"/>
+        </Grid.Background>
+        <Grid Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="398*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblJugador" FontWeight="DemiBold" Content="Nombre de Jugador" Loaded="lblJugador_Loaded" ></Label>
+
+        </Grid>
+        <Grid Row="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="356*"/>
+                <ColumnDefinition Width="177*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblScore" Grid.Column="1" Content="Score: 0" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Right" FontWeight="Heavy"></Label>
+        </Grid>
+    </Grid>
+</Window>

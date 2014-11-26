@@ -1,0 +1,42 @@
+﻿<Window x:Class="JuegoDardos.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Juego de Dardos" Height="500" Width="800" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Icon="images/icono.ico">
+
+
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="59*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="385*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="images/fondo.png"/>
+        </Grid.Background>
+        <!--MENU DE JUEGO-->
+        <Grid Column="0" Grid.Row="1" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <!--Elementos-->
+            <Button Name="btnPlay"  Content="Jugar" Foreground="MidnightBlue" Click="btnPlay_Click"/>
+            <Button Name="btnPuntuacion" Grid.Row="4" Content="Puntuaciones" Foreground="MidnightBlue"/>
+            <Button Name="btnReglas" Grid.Row="1" Content="Reglas" Foreground="MidnightBlue"/>
+            <Button Name="btnHistoria" Grid.Row="2" Content="Historia" Foreground="MidnightBlue" />
+            <Button Name="btnAcerca" Grid.Row="3" Content="Acerca de" Foreground="MidnightBlue"/>
+            <Button Name="btnSalir" Grid.Row="5" Content="Salir" Foreground="MidnightBlue" Click="btnSalir_Click"/>
+        </Grid>
+        <Label Grid.Column="1" Grid.RowSpan="2" Content="Juego de Dardos" HorizontalAlignment="Center" FontFamily="Stencil" FontSize="50" Foreground="Crimson">
+            
+        </Label>
+    </Grid>
+</Window> 

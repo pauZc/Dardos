@@ -1,0 +1,59 @@
+﻿<Window x:Class="JuegoDardos.clsJugador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Jugador" Height="300" Width="600" Icon="icono.ico" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="images/jugador.png"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+        <Grid Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="167*"/>
+                <ColumnDefinition Width="336*"/>
+                <ColumnDefinition Width="18*"/>
+                <ColumnDefinition Width="68*"/>
+                <ColumnDefinition Width="11*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Nombre:" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            <TextBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="txtJugador" Grid.Column="1" Foreground="DimGray" Opacity=".7" FontFamily="Tempus Sans ITC" FontSize="24" TextChanged="txtJugador_TextChanged" >
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFE8E8E8" Offset="0.008"/>
+                        <GradientStop Color="White" Offset="0.406"/>
+                        <GradientStop Color="#FFEEEEEE" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label Grid.Column="3" Name="lblConfirmacion" Visibility="Hidden">
+                <Label.Background>
+                    <ImageBrush ImageSource="images/right.png"/>
+                </Label.Background>
+
+            </Label>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0,21,0,45" Grid.RowSpan="3" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="74*"/>
+                <RowDefinition Height="61*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="493*"/>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <Button Name="btnIniciarJuego" Grid.Column="1" Grid.RowSpan="2" Click="btnIniciarJuego_Click" >
+                <Button.Background>
+                    <ImageBrush ImageSource="images/play.png"/>
+                </Button.Background>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>
